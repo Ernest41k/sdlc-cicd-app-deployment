@@ -61,7 +61,7 @@ jobs:
       - run: npm ci
       - run: npm test
       - name: Upload coverage report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: coverage-report
           path: coverage/
@@ -124,7 +124,7 @@ jobs:
         run: tar -czf release.tar.gz src node_modules package.json build-info.json
 
       - name: Upload release artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: release
           path: release.tar.gz
