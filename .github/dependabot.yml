@@ -1,0 +1,16 @@
+# Dependabot opens pull requests to keep dependencies up to date.
+# Those PRs run through the same pipeline as any other change.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      dev-dependencies:
+        dependency-type: development # one PR for all dev tools, less noise
+
+  - package-ecosystem: github-actions # keeps actions/checkout@v4 etc. current
+    directory: /
+    schedule:
+      interval: weekly
