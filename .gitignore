@@ -1,0 +1,6 @@
+node_modules/
+coverage/
+build-info.json
+*.tar.gz
+.env
+*.pem
